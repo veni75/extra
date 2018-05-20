@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by veni75 (http://jsbin.com/riwahah/7/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="extra.js.7">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+li input {display: none;}
+
+li.edit span {display: none;}
+
+li.edit input {display: initial;}
+
+</style>
+</head>
+<body>
+  <h1>Ez a cím</h1>
+  <p>ez pedig egy bekezdés</p>
+  <ul id="checklist">
+    <li><span>bevásárolni</span><input value="bevásárolni"/></li></li>
+  <li><span>főzni</span><input value="főzni"/></li></li>
+  <li><span>tanulni a programozást</span><input value="tanulni a programozást"/></li></li>
+  </ul>
+<script id="jsbin-javascript">
+var checklist = document.getElementById('checklist');
+var items = checklist.querySelectorAll('li');
+var inputs = checklist.querySelectorAll('input');
+
+
+for (var i=0; i<items.length; i++) {
+ items[i].addEventListener("click",editItem);
+ inputs[i].addEventListener("blur",updateItem);
+  inputs[i].addEventListener("keypress",itemKeypress);
+}
+
+
+function editItem(){
+  this.className="edit";
+  var input = this.querySelector("input");
+  input.focus();
+  input.setSelectionRange(0,input.value.length);
+}
+
+function updateItem () {
+  this.previousElementSibling.innerHTML = this.value;
+  this.parentNode.className="";
+}
+
+function itemKeypress(event) {
+  if (event.which === 13) {
+    updateItem.call(this);
+  }
+}
+
+
+</script>
+</body>
+</html>

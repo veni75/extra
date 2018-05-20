@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by veni75 (http://jsbin.com/xinevor/11/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="extra.js.6">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+.hide {display: none;}
+</style>
+</head>
+<body>
+  <h1>Ez a cím</h1>
+  <p>ez pedig egy bekezdés</p>
+  <ul>
+    <li> <a data-img="picture" href="#" id="demo">klikkelj ide</a></li>
+  </ul>
+<img class="hide" id="picture" src="https://i.imgur.com/EcO1qil.jpg">
+ 
+<script id="jsbin-javascript">
+var demo = document.getElementById('demo');
+var picture = document.getElementById('picture');
+    
+demo.addEventListener("click", function() {
+      if (picture.className === "hide") {
+         picture.className = "";
+         } else {
+         picture.className = "hide";
+         }
+         });
+    
+
+
+
+</script>
+</body>
+</html>

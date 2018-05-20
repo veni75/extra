@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by veni75 (http://jsbin.com/befivel/8/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="extra.js.9">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+ <script src="https://code.jquery.com/jquery-3.1.0.js"></script> 
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+<style id="jsbin-css">
+
+
+</style>
+</head>
+<body>
+  
+  
+<div class="container">
+  <div class="jumbotron">
+    <h1>Ez a cím</h1>
+    <button id="btn1">#btn1</button>
+    <button id="btn2">#btn2</button>
+    <button id="btn3">#btn3</button>
+    <button id="btn4">#btn4</button>
+  </div>
+  <div class="row">
+<div class="col-xs-3">
+<div id="panel1" class="panel panel-primary">
+  <div class="panel-heading">
+    színe
+  </div>
+  <div class="panel-body">kék
+  </div>
+  </div>
+  </div>
+    <div class="col-xs-3">
+<div id="panel2" class="panel panel-primary">
+  <div class="panel-heading">
+    mérete
+  </div>
+  <div class="panel-body">nagy
+  </div>
+  </div>
+  </div>
+    <div class="col-xs-3">
+<div id="panel3" class="panel panel-primary">
+  <div class="panel-heading">
+   anyaga
+  </div>
+  <div class="panel-body">fém
+  </div>
+  </div>
+  </div>
+    </div>
+  </div>
+<script id="jsbin-javascript">
+/* $(document).ready(function() {
+  $("#panel1").hide(3000).delay(1000).show(3000);
+  $("#panel1").css({color:'red',fontWeight:'bold'})
+});
+
+$(function() {
+  $('#btn1').html('my button');
+});*/
+
+$(function() {
+  $('#btn1').on('click',function(){
+    $('#panel1').slideToggle(2000);
+  });
+});
+</script>
+</body>
+</html>
